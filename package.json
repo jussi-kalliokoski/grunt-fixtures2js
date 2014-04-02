@@ -1,0 +1,36 @@
+{
+  "name": "grunt-fixtures2js",
+  "version": "0.0.0",
+  "description": "Convert your fixtures into a JS object for use in tests.",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jussi-kalliokoski/grunt-fixture2js"
+  },
+  "keywords": [
+    "grunt",
+    "task",
+    "fixture",
+    "testing"
+  ],
+  "author": {
+    "name": "Jussi Kalliokoski",
+    "email": "jussi.kalliokoski@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jussi-kalliokoski/grunt-fixture2js/issues"
+  },
+  "homepage": "https://github.com/jussi-kalliokoski/grunt-fixture2js",
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.4",
+    "coffee-script": "^1.7.1",
+    "grunt-contrib-nodeunit": "^0.3.3"
+  }
+}
