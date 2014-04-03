@@ -1,5 +1,5 @@
 {
-  "name": "grunt-fixtures2js",
+  "name": "grunt-gjs",
   "version": "0.1.0",
   "description": "Convert your fixtures into a JS object for use in tests.",
   "directories": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jussi-kalliokoski/grunt-fixture2js"
+    "url": "git://github.com/jussi-kalliokoski/grunt-fixtures2js"
   },
   "keywords": [
     "grunt",
@@ -24,9 +24,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jussi-kalliokoski/grunt-fixture2js/issues"
+    "url": "https://github.com/jussi-kalliokoski/grunt-fixtures2js/issues"
   },
-  "homepage": "https://github.com/jussi-kalliokoski/grunt-fixture2js",
+  "homepage": "https://github.com/jussi-kalliokoski/grunt-fixtures2js",
   "devDependencies": {
     "grunt-cli": "^0.1.13",
     "grunt": "^0.4.4",
