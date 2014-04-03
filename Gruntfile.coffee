@@ -13,6 +13,15 @@ module.exports = (grunt) ->
           tail: ")"
         files:
           "test/actual/test_head_tail.js": "test/fixtures/test_head_tail/*"
+      test_post_processors:
+        options:
+          postProcessors:
+            "**/*.txt": "default"
+            "**/*.wav": "arraybuffer"
+            "**/*.json": "json"
+            "**/*": "base64"
+        files:
+          "test/actual/test_post_processors.js": "test/fixtures/test_post_processors/*"
     nodeunit:
       tests: ["test/*_test.js"]
 

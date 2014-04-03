@@ -32,5 +32,9 @@
     "grunt": "^0.4.4",
     "coffee-script": "^1.7.1",
     "grunt-contrib-nodeunit": "^0.3.3"
+  },
+  "dependencies": {
+    "minimatch": "^0.2.14",
+    "lodash": "^2.4.1"
   }
 }
