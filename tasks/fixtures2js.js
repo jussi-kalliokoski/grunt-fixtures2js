@@ -4,24 +4,18 @@ var MSG_CREATED_FILE = "".concat("Created file ", "%s".cyan, " containing fixtur
 
 module.exports = function (grunt) {
     grunt.registerMultiTask("fixtures2js", "Reads fixtures and generates a JS file that allows you to access the fixtures", function () {
-        var _ = require("lodash");
-        var stringify = require("./lib/stringify");
-        var process = require("./lib/process");
-
-        var options = this.options({
-            head: "window.FIXTURES = ",
-            tail: ";",
-            postProcessors: {}
-        });
+        var fs = require("fs");
+        var fixtures2js = require("fixtures2js");
+        var options = this.options();
 
         this.files.forEach(function (file) {
-            var fixtures = {};
+            var fixtures = fixtures2js(options);
 
             file.src.forEach(function (source) {
-                fixtures[source] = process(source, options.postProcessors);
+                fixtures.addFixture(source, fs.readFileSync(source));
             });
 
-            var content = options.head + stringify(fixtures) + options.tail;
+            var content = fixtures.finish().toString("utf8");
             grunt.file.write(file.dest, content);
             grunt.log.writeln(MSG_CREATED_FILE, file.dest, file.src.map(function (source) {
                 return source.cyan;
