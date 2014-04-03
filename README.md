@@ -30,6 +30,7 @@ fixtures2js: {
 
 * `head` (defaults to `window.FIXTURES = `) a string to insert before the generated JSON.
 * `tail` (defaults to `;`) a string to insert after the generated JSON.
+* `postProcessors` (defaults to `{}`) a string to string object where keys are `minimatch` patterns and values are one of `default`, `json`, `base64` or `bytearray`. If a file is not matched by any pattern, `default` is used.
 
 ## Examples
 
@@ -39,7 +40,10 @@ fixtures2js: {
     default: {
         options: {
             head: "processFixtures(",
-            tail: ");"
+            tail: ");",
+            postProcessors: {
+                "**/*.json": "json"
+            }
         },
         files: {
             "my-fixture-file.js": "fixtures/*"
@@ -53,6 +57,9 @@ Running `grunt fixtures2js:default` will read the contents of the files in the `
 ```javascript
 processFixtures({
     "fixtures/one-fixture-file.txt": "The contents of the fixture file here",
-    "fixtures/other-fixture-file.txt": "The contents of another fixture file here"
+    "fixtures/other-fixture-file.txt": "The contents of another fixture file here",
+    "fixtures/stuff.json": {
+        "foo": "bar"
+    }
 });
 ```
