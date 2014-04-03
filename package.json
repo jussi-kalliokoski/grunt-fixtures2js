@@ -1,5 +1,5 @@
 {
-  "name": "grunt-gjs",
+  "name": "grunt-fixtures2js",
   "version": "0.1.1",
   "description": "Convert your fixtures into a JS object for use in tests.",
   "directories": {
