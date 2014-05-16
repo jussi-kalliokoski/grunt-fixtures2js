@@ -12,7 +12,10 @@ module.exports = function (grunt) {
             var fixtures = fixtures2js(options);
 
             file.src.forEach(function (source) {
-                fixtures.addFixture(source, fs.readFileSync(source));
+                var stats = fs.lstatSync(source);
+                if (stats.isFile()) {
+                  fixtures.addFixture(source, fs.readFileSync(source));
+                }
             });
 
             var content = fixtures.finish().toString("utf8");
