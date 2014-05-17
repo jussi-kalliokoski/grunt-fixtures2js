@@ -22,6 +22,9 @@ module.exports = (grunt) ->
             "**/*": "base64"
         files:
           "test/actual/test_post_processors.js": "test/fixtures/test_post_processors/*"
+      test_folders_and_wildcards:
+        files:
+          "test/actual/test_folders_and_wildcards.js": "test/fixtures/test_folders_and_wildcards/**/*"
     nodeunit:
       tests: ["test/*_test.js"]
 
