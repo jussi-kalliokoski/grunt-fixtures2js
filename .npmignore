@@ -1,7 +1,0 @@
-tests
-node_modules
-.jshintrc
-.travis.yml
-Gruntfile.coffee
-.git
-.gitignore

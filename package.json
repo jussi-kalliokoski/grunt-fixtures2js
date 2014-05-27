@@ -5,6 +5,9 @@
   "directories": {
     "test": "test"
   },
+  "files": [
+    "tasks"
+  ],
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
   },
