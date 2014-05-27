@@ -1,6 +1,6 @@
 {
   "name": "grunt-fixtures2js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert your fixtures into a JS object for use in tests.",
   "directories": {
     "test": "test"
